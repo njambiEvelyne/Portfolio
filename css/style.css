@@ -169,17 +169,30 @@ body {
     align-items: center;
 }
 
-.image-placeholder {
+
+/* Profile Image Styles */
+.profile-image-container {
     width: 300px;
     height: 300px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: white;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-lg);
+    position: relative;
 }
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    /*transition: transform 0.3s ease;*/
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
 
 /* Sections Common Styles */
 section {
